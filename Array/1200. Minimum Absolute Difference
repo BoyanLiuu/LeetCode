@@ -1,0 +1,25 @@
+class Solution {
+   public static List<List<Integer>> minimumAbsDifference(int[] arr) {
+        Arrays.sort(arr); // use o(nlogn) to sort the array
+        int min = Integer.MAX_VALUE;
+		//find min diff
+        for (int i = 1; i < arr.length; i++) {
+            min = Math.min(min, arr[i] - arr[i - 1]);
+        }
+		//add all element with diff of min
+        List<List<Integer>> result = new ArrayList<>();
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] == min) {
+                List<Integer> list = new ArrayList<>();
+                list.add(arr[i - 1]);
+                list.add(arr[i]);
+                result.add(list);
+            }
+        }
+        return result;
+    }
+}
+
+
+//The main idea is to use Array.sort() to sort array in ascending order. 
+then the minimum absolute will be easily found in this way.
