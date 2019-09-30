@@ -1,0 +1,32 @@
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> lst = new ArrayList<List<Integer>>(); 
+        if (numRows == 0){
+            return lst;
+            
+        }
+        List <Integer> t1 = new ArrayList<Integer>(1);
+        t1.add(1);
+        lst.add(t1);
+        for (int i=1;i<numRows; i++){
+            List<Integer> lst2 = new ArrayList<Integer>(i+1);
+//             set both front and end as 1
+                lst2.add(1);
+
+            int temp;
+            for(int j = 0; j < i-1; j++){
+                 temp = lst.get(i-1).get(j)+lst.get(i-1).get(j+1);
+                 lst2.add(temp);
+            }
+            lst2.add(1);
+            lst.add(lst2);
+            
+                
+                
+            }
+     
+          return lst;   
+        }
+        
+          
+    
