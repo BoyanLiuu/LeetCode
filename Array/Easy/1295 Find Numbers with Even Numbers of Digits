@@ -1,0 +1,23 @@
+class Solution {
+    //loop through each index and convert index to string and count length%2 ==0
+    public int findNumbers(int[] nums) {
+        int count = 0;
+        for(int x : nums){
+           int temp =  Integer.toString(x).length()%2;
+            if (temp == 0 ){
+                count+=1;
+            }
+            
+        }
+        return count;
+        
+    }
+    
+    //more concise version  from others
+    //     public int findNumbers(int[] nums) {
+    //     int cnt = 0;
+    //     for (int n : nums)
+    //         cnt += 1 - Integer.toString(n).length() % 2;
+    //     return cnt;
+    // }
+}
