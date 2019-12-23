@@ -1,0 +1,29 @@
+class Solution {
+    public String defangIPaddr(String address) {
+        //Answer 1
+        //if we allow to use replace method
+        // return address.replace(".","[.]");
+        
+        //Answer 2
+        //if we do not allow to use replace method, we will iterate each character
+        StringBuffer str = new StringBuffer("");
+        //loop through each character in address, 
+        //if you want to use for each , you have to convert to toCharArray
+        for(char c : address.toCharArray() ){
+            if (c == '.'){
+                str.append("[.]");
+            }else{
+                str.append(c);
+            }
+        }
+        
+        // else you can use for loop and xx.charAt() to access each index
+        
+        return  str.toString();
+    }
+    
+    // Answer 3
+    //     public String defangIPaddr(String address) {
+    //     return String.join("[.]", address.split("\\."));
+    // }
+}
