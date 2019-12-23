@@ -1,0 +1,54 @@
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+        //Answer 1:
+        //Main idea: Put each character in s into map and it's occurance is value
+        //loop through String J and calculate how many exist inside S.
+        //if either one is empty, we will just return 0
+        if (J == null || S == null || J.length() == 0 || S.length() == 0){
+            return 0;
+            
+        }
+        Map <Character,Integer> map =  new HashMap<>();
+        int count = 0;
+        for(char c : S.toCharArray()){
+            if (map.containsKey(c)){
+                map.put(c,map.get(c)+1);
+            }else{
+                map.put(c,1);
+            }
+                 
+        }
+        for(char c : J.toCharArray()){
+            if (map.containsKey(c)){
+                count += map.get(c);
+            }
+           
+        }
+        
+        return count;
+        
+        
+    }
+    
+    //Answer 2: We dont need use a map, we can use array
+//         public int numJewelsInStones(String J, String S) {
+//         // Corner cases.
+//         if (J == null || S == null || J.length() == 0 || S.length() == 0)
+//             return 0;
+        
+//         // Map char to its frequency in S.
+//         int[] charToFreq = new int[256]; 
+//         for (char ch : S.toCharArray()) {
+//             charToFreq[ch]++;
+//         }
+        
+//         int numJewels = 0; // Number of jewels among stones.
+//         for (char ch : J.toCharArray()) {
+//             if (charToFreq[ch] > 0) {
+//                 numJewels += charToFreq[ch];
+//             }
+//         }
+        
+//         return numJewels;
+//     }
+}
