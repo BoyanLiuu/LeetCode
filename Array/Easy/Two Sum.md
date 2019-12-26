@@ -7,6 +7,8 @@ Use a nested for-loop for this purpose and iterate over the entire array for eac
 ##Time Complexity O(n^2)
 
 # Use HashSet Solution2
+
+THe Code works in O(n) as the whole array is iterated over once.
 ```
 class Solution {
 public int[] twoSum(int[] nums, int target) {
