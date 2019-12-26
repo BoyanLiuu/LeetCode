@@ -17,8 +17,8 @@ class Solution {
     //arr[1,2,3,4] will make result become [1,1,2,6];
     for (i = 0; i < n; i++)  
     { 
-      #* result[i] = temp; 
-      #* temp *= nums[i]; 
+      ** result[i] = temp;  **
+      ** temp *= nums[i]; **
     } 
 
     // Initializing temp to 1 for product on right side
@@ -27,8 +27,8 @@ class Solution {
     // Product of elements on right side excluding arr[i] */
     for (i = n - 1; i >= 0; i--)  
     { 
-     #* result[i] *= temp; 
-     #* temp *= nums[i]; 
+     ** result[i] *= temp; **
+     ** temp *= nums[i]; **
     } 
     return result; 
   } 
