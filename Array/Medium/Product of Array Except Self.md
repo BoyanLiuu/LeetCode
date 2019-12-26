@@ -17,8 +17,14 @@ class Solution {
     //arr[1,2,3,4] will make result become [1,1,2,6];
     for (i = 0; i < n; i++)  
     { 
-      result[i] = temp;
+    ```html
+           <p style='color:red'>
+     result[i] = temp;
       temp *= nums[i];
+        </p>
+    ```
+
+
     } 
 
     // Initializing temp to 1 for product on right side
