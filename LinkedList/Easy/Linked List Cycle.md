@@ -1,5 +1,5 @@
 # We can use 2 pointer in linkedlist question
-
+The algorithm runs in Constant with O(n)with the Auxiliary Space used equals to O(1).
 ``` Java
 public class Solution {
     public boolean hasCycle(ListNode head) {
