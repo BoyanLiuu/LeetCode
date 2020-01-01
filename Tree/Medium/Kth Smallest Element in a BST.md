@@ -1,4 +1,4 @@
-##Time complexity : O(N) to build a traversal. Space complexity :O(N) to keep an inorder traversal. 
+## Time complexity : O(N) to build a traversal. Space complexity :O(N) to keep an inorder traversal. 
 ```Java 
 class Solution {
   public ArrayList<Integer> inorder(TreeNode root, ArrayList<Integer> arr) {
