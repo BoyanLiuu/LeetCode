@@ -1,4 +1,4 @@
-# Solution:
+# Solution: time complexity: O(n)
 ```Java
 /**
  * Definition for a binary tree node.
